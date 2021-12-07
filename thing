@@ -12,7 +12,7 @@ local LocalPlayer = Players.LocalPlayer
 local CurrentCamera = Workspace.CurrentCamera
 local Mouse = LocalPlayer:GetMouse()
 
--- // Optimisation Vars (ugly)
+-- // Optimisation Vars 
 local Drawingnew = Drawing.new
 local Color3fromRGB = Color3.fromRGB
 local Vector2new = Vector2.new
@@ -69,7 +69,7 @@ circle.Filled = false
 function SilentAim.UpdateFOV()
     if (circle) then
         -- // Set Circle Properties
-        circle.Visible = kittenassist.ShowFov or SilentAim.ShowFOV
+        circle.Visible = zioware.ShowFov or SilentAim.ShowFOV
         circle.Radius = (SilentAim.FOV * 3)
         circle.Position = Vector2new(Mouse.X, Mouse.Y + GetGuiInset(GuiService).Y)
         circle.NumSides = SilentAim.FOVSides
